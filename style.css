@@ -168,6 +168,145 @@ a {
 
 }
 
+.menu {
+    position: relative;
+    isolation: isolate;
+}
+
+.menu::before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: calc(50% - 450px);
+    background-color: var(--primary-color);
+    z-index: -1;
+}
+
+.menu-container .section-header {
+    margin-bottom: 1rem;
+}
+
+.menu-container a{
+    display: inline-block;
+    margin-bottom: 4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.menu-container a:hover {
+    color: var(--primary-color-dark);
+}
+
+.menu-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.menu-card {
+    max-width: 300px;
+    margin-inline: auto;
+    box-shadow: 10px 5px 30px rgba(0 ,0, 0, 0.4);
+    transition: 0.3s;
+}
+
+.menu-card:hover{
+    transform: translateY(-1rem);
+}
+
+.menu-card-content {
+    padding: 1rem;
+    background-color: var(--white);
+}
+
+.menu-card-content h4{
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-family: var(--font) ;
+ }
+
+ .menu-card-content h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+
+ }
+
+ .note {
+    margin-block: 5rem;
+    background-image: url(img/fam.jpg);
+    background-size: cover ;
+    background-position: center center;
+    background-repeat: no-repeat;
+ }
+
+ .note-container form{
+    max-width: 600px;
+    padding: 1rem;
+    display: grid;
+    gap: 2rem;
+    background-color: lightgrey;
+    transform: translateY(4rem);
+ }
+
+ .note-container h4{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+
+ }
+
+ .note-container .input-row{
+    display: grid;
+    gap: 1rem;
+
+ }
+
+ .note-container .input-group {
+    display: grid;
+    gap: 10px;
+
+ }
+
+ .note-container label {
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--white);
+ }
+
+ .note-container input {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: rgb(221, 201, 201);
+    border: none;
+    outline: none;
+ }
+
+ .note-container .btn {
+    width: fit-content;
+    margin-left: auto;
+
+ }
+
+ @media ( width > 540px ) {
+    .menu-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .note-container form {
+        padding: 1.5rem;
+
+    }
+    .note-container .input-row:not(:last-child){
+        grid-template-columns: repeat(2, 1fr);
+    }
+ }
+
+
 @media (width > 768px) {
     nav {
         position: static;
@@ -221,4 +360,22 @@ a {
         justify-content: flex-start;
     }
 
+    .menu-gird {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .note-container form {
+        padding: 2rem;
+    }
+
+}
+
+@media (width > 1024px) {
+     .menu-grid {
+        gap: 1.5rem;
+     }
+
+     .menu-card-content{
+        padding: 1.5rem;
+     }
 }
