@@ -3,11 +3,11 @@
 
 
 :root{
-    --primary-color: pink;
-    --primary-color-dark : rgb(239, 85, 111);
-    --secondary-color: purple;
+    --primary-color: rgb(229, 170, 180);
+    --primary-color-dark : rgb(201, 108, 123);
+    --secondary-color: rgb(223, 169, 223);
     --text-dark: black;
-    --text-light : gray;
+    --text-light : rgb(119, 118, 118);
     --extra-light : rgb(202, 202, 202);
     --white : white;
     --max-width : 1200px;
@@ -200,6 +200,11 @@ a {
     color: var(--primary-color-dark);
 }
 
+.menu-container h2{
+    font-size: 2rem;
+    color: rgb(99, 92, 83);
+}
+
 .menu-grid {
     display: grid;
     gap: 1.5rem;
@@ -248,7 +253,7 @@ a {
     padding: 1rem;
     display: grid;
     gap: 2rem;
-    background-color: lightgrey;
+    background-color: rgb(238, 198, 151);
     transform: translateY(4rem);
  }
 
@@ -281,7 +286,7 @@ a {
     padding: 0.75rem 1rem;
     font-size: 1rem;
     color: var(--white);
-    background-color: rgb(221, 201, 201);
+    background-color: rgb(222, 206, 175);
     border: none;
     outline: none;
  }
@@ -292,9 +297,95 @@ a {
 
  }
 
+ .about-container {
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+
+ }
+
+ .about-image img{
+    max-width: 450px;
+    margin-inline: auto;
+ }
+
+ .about-content .section-header {
+    margin-bottom: 2rem;
+ }
+
+ .about-content > div {
+    padding-left: 2rem;
+    border-left: 2px solid var(--primary-color-dark);
+ }
+
+ .about-content p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    line-height: 1.75rem;
+ }
+
+ .about-btn {
+    margin-top: 2rem;
+ }
+
+ footer{
+    background-color: var(--secondary-color);
+   
+ }
+
+ .footer-container {
+    display: grid;
+    gap: 4rem 2rem;
+    padding-top: 3rem;
+    
+ }
+
+ .footer-logo img {
+    max-width: 175px;
+ }
+
+ .footer-col h4 {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+ }
+
+
+ .footer-link {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+
+ }
+ .footer-col:last-child .footer-link {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+ .footer-link a{
+    font-weight: 500;
+    color: gray;
+    font-size: 1rem;
+    
+ }
+
+ .footer-link a:hover {
+    color: rgb(108, 70, 108) ;
+ }
+
+ .footer-bar {
+    padding: 1rem;
+    font-size: .75rem;
+    color: rgb(118, 116, 116);
+    text-align: center;
+ }
+
  @media ( width > 540px ) {
     .menu-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(3,1fr);
     }
 
     .note-container form {
@@ -302,6 +393,10 @@ a {
 
     }
     .note-container .input-row:not(:last-child){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
         grid-template-columns: repeat(2, 1fr);
     }
  }
@@ -366,6 +461,19 @@ a {
 
     .note-container form {
         padding: 2rem;
+    }
+
+    .about-container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .about-content {
+        grid-area: 1/1/2/2 ;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
     }
 
 }

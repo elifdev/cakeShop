@@ -24,14 +24,27 @@ const scrollRevealOption = {
 
 };
 
-scrollRevealOption().reveal(".header-container h1", {
+
+ScrollReveal().reveal(".header-container h1", {
     ...scrollRevealOption,
 });
-scrollRevealOption().reveal(".header-container p", {
+ScrollReveal().reveal(".header-container p", {
     ...scrollRevealOption,
-    delay:500,
+    delay: 500,
 });
-scrollRevealOption().reveal(".header-buttons", {
+ScrollReveal().reveal(".header-buttons", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
+ScrollReveal().reveal(".about-image img", {
+    ...scrollRevealOption,
+    origin: "right",
+});
+ScrollReveal().reveal(".about-content .section-header", {
+    ...scrollRevealOption,
+    delay: 500,
+});
+ScrollReveal().reveal(".about-content > div", {
     ...scrollRevealOption,
     delay: 1000,
 });
