@@ -3,10 +3,10 @@
 
 
 :root{
-    --primary-color: rgb(229, 170, 180);
-    --primary-color-dark : rgb(201, 108, 123);
+    --primary-color: #a98e95;
+    --primary-color-dark : #DD8EA4;
     --secondary-color: rgb(223, 169, 223);
-    --text-dark: black;
+    --text-dark: #31383F;
     --text-light : rgb(119, 118, 118);
     --extra-light : rgb(202, 202, 202);
     --white : white;
@@ -164,7 +164,7 @@ a {
 
 .header-buttons .btn:nth-child(2):hover {
     border-color: var(--primary-color);
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-dark);
 
 }
 
@@ -253,7 +253,7 @@ a {
     padding: 1rem;
     display: grid;
     gap: 2rem;
-    background-color: rgb(238, 198, 151);
+    background-color: rgb(183, 162, 139);
     transform: translateY(4rem);
  }
 
@@ -329,7 +329,7 @@ a {
  }
 
  footer{
-    background-color: var(--secondary-color);
+    background-color: var(--text-light);
    
  }
 
@@ -347,7 +347,6 @@ a {
  .footer-col h4 {
     margin-bottom: 2rem;
     font-size: 1rem;
-    font-weight: 600;
     color: var(--white);
  }
 
@@ -367,7 +366,7 @@ a {
 
  .footer-link a{
     font-weight: 500;
-    color: gray;
+    color: var(--text-dark);
     font-size: 1rem;
     
  }
