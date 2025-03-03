@@ -82,13 +82,19 @@ nav {
 }
 
 .nav-menu a {
+    display: inline-block;
     font-weight: 500;
     color: var(--white);
     white-space: nowrap ;
+    transition: transform .3s ease-in-out; 
 }
 
 .nav-menu a:hover {
     color: var(--text-dark);
+    transform: scale(1.1);
+}
+.nav-menu li {
+    list-style: none;
 }
 
 .section-container{
@@ -114,11 +120,14 @@ nav {
     border: 2px solid var(--primary-color);
     transition: 0.3s;
     cursor: pointer;
+    border-radius: 30px 50px;
+    transition: transform .3s ease-in-out; 
 }
 
 .btn:hover{
     background-color: var(--primary-color-dark);
     border-color: var(--primary-color-dark);
+    transform: scale(1.1);
 }
 
 img{
@@ -136,15 +145,16 @@ a {
     font-size: 4rem;
     font-weight: 600;
     font-family: var(--font);
-    color: var(--white);
+    color: var(--text-light);
     text-align: center;
 }
 .header-container p {
     margin-bottom: 2rem;
     line-height: 1.75rem;
-    color: var(--white);
+    color: var(--extra-light);
     text-align: center;
 }
+
 
 .header-buttons {
     display: flex;
@@ -212,8 +222,9 @@ a {
 
 .menu-card {
     max-width: 300px;
+    width: 300px; 
     margin-inline: auto;
-    box-shadow: 10px 5px 30px rgba(0 ,0, 0, 0.4);
+    box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.4);
     transition: 0.3s;
 }
 
@@ -221,9 +232,19 @@ a {
     transform: translateY(-1rem);
 }
 
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+}
+
 .menu-card-content {
     padding: 1rem;
     background-color: var(--white);
+    height: 150px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
 }
 
 .menu-card-content h4{
@@ -378,13 +399,13 @@ a {
  .footer-bar {
     padding: 1rem;
     font-size: .75rem;
-    color: rgb(118, 116, 116);
+    color: rgb(196, 193, 193);
     text-align: center;
  }
 
  @media ( width > 540px ) {
     .menu-grid {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 
     .note-container form {
@@ -398,10 +419,14 @@ a {
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
     }
+   
+    .menu::before {
+        width: 0; 
+      }
  }
 
 
-@media (width > 768px) {
+@media (width > 770px) {
     nav {
         position: static;
         padding: 2rem 1rem;
@@ -454,8 +479,9 @@ a {
         justify-content: flex-start;
     }
 
-    .menu-gird {
-        grid-template-columns: repeat(4, 1fr);
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+        
     }
 
     .note-container form {
@@ -477,6 +503,7 @@ a {
 
 }
 
+
 @media (width > 1024px) {
      .menu-grid {
         gap: 1.5rem;
@@ -485,4 +512,9 @@ a {
      .menu-card-content{
         padding: 1.5rem;
      }
+     .menu-gird {
+        grid-template-columns: repeat(4, 1fr);
+        
+    }
 }
+
